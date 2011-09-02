@@ -1,0 +1,188 @@
+! Parts (C) 1996 By Greg J. Badros <gjb@cs.duke.edu>
+! You may use this file as specified under the GNU General Public License
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! emacs, xemacs
+
+                xemacs.geometry: 110x46+0+0
+    Emacs.default.attributeFont: -misc-fixed-medium-r-normal--*-120-100-100-c-*-*-*
+       Emacs.bold.attributeFont: -misc-fixed-bold-r-normal--*-120-100-100-c-*-*-*
+     Emacs.italic.attributeFont: -misc-fixed-medium-o-normal--*-120-100-100-c-*-*-*
+Emacs.bold-italic.attributeFont: -misc-fixed-bold-o-normal--*-120-100-100-c-*-*-*
+
+Emacs*menubar*FontSet: -*-helvetica-bold-r-*-*-*-120-*-*-*-*-*-*
+  Emacs*popup*FontSet: -*-helvetica-bold-r-*-*-*-120-*-*-*-*-*-*
+
+! FIXME: thay say "XIM fontset (defaults to system fontset default)", but
+! "default fontset" seems to be unset. TODO: look up XtDefaultFontSet in
+! xemacs21 sources.
+  *EmacsFrame.FontSet: -misc-fixed-medium-r-normal--*-120-100-100-c-*-*-*
+
+kvt.geometry: 30x25+00+20
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! xterm (and friends)
+
+          *VT100.geometry: 80x25
+*VT100.highlightSelection: true
+! Uncomment this to display the scrollbar
+          *VT100*scrollBar: true
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! This section is for XTerm.VT100
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Uncomment this to use color for the bold attribute
+*VT100*colorBDMode: on
+    *VT100*colorBD: blue
+! Uncomment this to use color for underline attribute
+   *VT100*colorULMode: on
+   *VT100*underLine: on
+    *VT100*colorUL: magenta
+
+!*VT100.font: -cronyx-courier-medium-r-*-*-*-120-*-*-*-*-koi8-r
+!*VT100.font:	-cronyx-courier-medium-r-*--*-120-*-*-*-*-iso10646-1
+*VT100.font:	-misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
+
+!*VT100.utf8Fonts.font:	-misc-fixed-medium-r-normal--20-200-75-75-c-100-iso10646-1
+*VT100.utf8Fonts.font:	-cronyx-courier-medium-r-*--*-120-*-*-*-*-iso10646-1
+
+!XTerm*background: gray80
+!XTerm*foreground: black
+*VT100*background: black
+*VT100*foreground: peachpuff
+
+! the contents of the screen when they are exited to what they were before
+! they were started.  When it is off, the contents of vi will remain on the
+! screen after the program is quit.
+*VT100.titeInhibit: true
+
+! Uncomment this to turn off color mode in your xterms
+!XTerm.VT100*colorMode: off
+XTerm.dynamicColors: on
+
+! Number of lines of scrollback to save
+*VT100*saveLines: 1500
+
+*VT100*reverseWrap: true
+
+*VT100*color12: RoyalBlue
+
+         *visualBell: false
+    *scrollTtyOutput: False
+          *scrollKey: True
+Scrollbar.JumpCursor: True
+
+XLock.mode: xjack
+!XLock.erasedelay: 100
+!XLock.timeout: 120
+!XLock.lockdelay: 300
+XLock.invalid: Ó≈-¡!
+   XLock.font: -*-times-medium-r-*-*-24-*-*-*-*-*-koi8-*
+!XLock.planfont: -*-fixed-medium-r-*-*-*-*-*-*-*-*-koi8-*
+  XLock.username: login:
+  XLock.password: password:
+      XLock.info: 
+  XLock.validate: Ú¿»¡¿...
+XLock.foreground: yellow
+XLock.background: black
+! trusted modes
+!XLock.modelist: blank,xjack
+
+    xdvi.geometry: 930x765
+xdvi.shrinkFactor: 6
+
+!## NETSCAPE
+!Netscape*fontList: -cronyx-helvetica-medium-r-*-*-*-*-*-*-*-*-*-r 
+
+!!! --- added from http://lib.ru/CYRILLIC/netscyrnews.txt --- !!!
+
+Netscape*XmTextField.fontList: -cronyx-courier-medium-r-*-*-*-100-*-*-*-*-koi8-r
+   Netscape*XmText.fontList: -*-courier-medium-r-*-*-*-100-*-*-*-*-koi8-r
+   Netscape*XmList*fontList: -*-courier-medium-r-*-*-*-100-*-*-*-*-koi8-r
+
+  Netscape*menuBar*fontList: -*-helvetica-bold-r-*-*-*-100-*-*-*-*-koi8-r
+!Netscape*menuBar*historyTruncated.fontList: -*-helvetica-medium-o-*-*-*-120-*-*-*-*-iso8859-*
+    Netscape*popup*fontList: -*-helvetica-bold-r-*-*-*-100-*-*-*-*-koi8-r
+
+  Netscape*topArea*fontList: -*-helvetica-bold-r-*-*-*-120-*-*-*-*-koi8-r
+Netscape*topArea*XmTextField.fontList: -*-courier-medium-r-*-*-*-100-*-*-*-*-koi8-r
+Netscape*topArea*XmText.fontList: -*-courier-medium-r-*-*-*-100-*-*-*-*-koi8-r
+
+!Netscape*mouseDocumentation.fontList: -*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-*
+Netscape*docinfoButton.fontList: -*-helvetica-medium-r-*-*-*-120-*-*-*-*-koi8-r
+!Netscape*mailto*urlLabel.fontList: -*-helvetica-medium-r-*-*-*-140-*-*-*-*-iso8859-*
+
+!Netscape*licenseDialog*text.fontList: -*-courier-medium-r-*-*-*-120-*-*-*-*-iso8859-*
+
+
+  Netscape*XmLGrid*fontList: -*-helvetica-medium-r-*-*-*-80-*-*-*-*-koi8-r, -*-helvetica-bold-r-*-*-*-80-*-*-*-*-koi8-r=BOLD, -*-helvetica-medium-o-*-*-*-100-*-*-*-*-iso8859-*=ITALIC
+Netscape*documentFonts.defaultFont*iso-8859-1.fixed: cronyx-courier-100-noscale
+    Netscape*defaultCharset: koi8-r
+
+!Netscape*documentFonts.charsetlang*iso-8859-1: Russian
+!!!---added from http://lib.ru/CYRILLIC/netscyrnews.txt --- !!!
+
+
+Netscape*drawingArea.translations: #replace    \
+                 <Btn1Down>: ArmLink()   \n\
+                 <Btn2Down>: ArmLink()   \n\
+             ~Shift<Btn1Up>: ActivateLink()  \n\
+             ~Shift<Btn2Up>: ActivateLink(new-window)  \
+                                        DisarmLink()    \n\
+              Shift<Btn1Up>: ActivateLink(save-only)  \
+                                        DisarmLink()    \n\
+              Shift<Btn2Up>: ActivateLink(save-only)  \
+                                        DisarmLink()    \n\
+               <Btn1Motion>: DisarmLinkIfMoved()  \n\
+               <Btn2Motion>: DisarmLinkIfMoved()  \n\
+               <Btn3Motion>: DisarmLinkIfMoved()  \n\
+                   <Motion>: DescribeLink()  \n\
+                 <Btn3Down>: xfeDoPopup()    \n\
+                   <Btn3Up>: ActivatePopup() \n\
+             Ctrl<Btn4Down>: PageUp()\n\
+             Ctrl<Btn5Down>: PageDown()\n\
+            Shift<Btn4Down>: xfeDoCommand(back)\n\
+            Shift<Btn5Down>: LineDown()\n\
+             None<Btn4Down>: LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()\n\
+             None<Btn5Down>: LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()\n\
+              Alt<Btn4Down>: xfeDoCommand(forward)\n\
+              Alt<Btn5Down>: xfeDoCommand(back)\n
+
+Netscape*globalNonTextTranslations: #override\n\
+            Shift<Btn4Down>: xfeDoCommand(back)\n\
+            Shift<Btn5Down>: xfeDoCommand(forward)\n\
+             None<Btn4Down>: LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()\n\
+             None<Btn5Down>: LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()\n\
+              Alt<Btn4Down>: xfeDoCommand(forward)\n\
+              Alt<Btn5Down>: xfeDoCommand(back)\n
+
+! Roster width in groupchat windows
+    Tkabber.chatRosterWidth: 90
+         Tkabber.background: #dddddd
+         Tkabber.foreground: #000000
+   Tkabber.activeBackground: #ebebeb
+   Tkabber.activeForeground: #000000
+   Tkabber.selectBackground: #334080
+   Tkabber.selectForeground: #ffffff
+Tkabber.highlightBackground: #dddddd
+Tkabber.highlightForeground: #000000
+        Tkabber.selectColor: #999999
+  Tkabber.selectBorderWidth: 0
+   Tkabber.insertBackground: #000000
+!                Tkabber.font: -efont-fixed-*-*-*-*-14-*-*-*-*-*-*-*
+!                 *Entry.font: -efont-fixed-*-*-*-*-14-*-*-*-*-*-*-*
+!                *Chat.mefont: -efont-fixed-*-*-*-*-14-*-*-*-*-*-*-*
+!                *Chat.myfont: -efont-fixed-*-*-*-*-14-*-*-*-*-*-*-*
+       URxvt.geometry: 80x25
+       URxvt.scrollstyle: xterm
+ URxvt.colorBDMode: on
+     URxvt.colorBD: blue
+ URxvt.colorULMode: on
+   URxvt.underLine: on
+     URxvt.colorUL: magenta
+URxvt.font: -*-fixed-medium-r-*-*-*-120-100-100-*-*-iso10646-*
+URxvt.background: black
+URxvt.foreground: peachpuff
+URxvt.saveLines: 1500
+URxvt.scrollTtyKeypress: on

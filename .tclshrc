@@ -1,0 +1,12 @@
+set path ~/Projects/JScp/src/scps/tools/just/lib
+
+if [lsearch -exact $::auto_path $path]==-1 { lappend ::auto_path $path }
+
+if {$tcl_interactive} {
+    package require tclreadline
+    ::tclreadline::Loop
+}
+
+### Local variables:
+### mode: tcl
+### End:

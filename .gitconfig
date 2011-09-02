@@ -1,0 +1,15 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[user]
+	name = Artem Shvorin
+	email = shvorin@gmail.com
+[core]
+	excludesfile = /home/art/.git-excludesfile
+
+[http]
+	sslVerify = false
+[alias]
+	st = status
+	log-svn = log --name-status
