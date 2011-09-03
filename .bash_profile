@@ -12,7 +12,6 @@ export RSYNC_RSH=ssh
 
 export HISTFILESIZE=1000
 export HISTSIZE=1000
-export EDITOR=/usr/bin/vim
 
 # this is workaround for buggy versions of bash
 export OSTYPE
