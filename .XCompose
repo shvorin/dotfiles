@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+#
+
+# NB: не используем дефлотные заточки, потому что они двух- и более клавишные,
+# и из-за них не работают наши одноклавишные
+# include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+# Ударение
+<Multi_key> <apostrophe> : U0301 # stress mark (use as suffix)
+<Multi_key> <Cyrillic_e> : U0301 # stress mark (use as suffix)
+
+#
+# Кавычки
+#
+# "родные" кавычки
+<Multi_key> <Cyrillic_be>       : "«"   guillemotleft  # LEFT DOUBLE ANGLE QUOTATION
+<Multi_key> <Cyrillic_yu>       : "»"   guillemotright # RIGHT DOUBLE ANGLE QUOTATION
+<Multi_key> <Cyrillic_BE>       : "“"   U201c # LEFT DOUBLE QUOTATION MARK
+<Multi_key> <Cyrillic_YU>       : "”"   U201d # RIGHT DOUBLE QUOTATION MARK
+#
+# "чужие" кавычки
+<Multi_key> <comma>             : "“"   U201c # LEFT DOUBLE QUOTATION MARK
+<Multi_key> <period>            : "”"   U201d # RIGHT DOUBLE QUOTATION MARK
+<Multi_key> <less>              : "«"   guillemotleft  # LEFT DOUBLE ANGLE QUOTATION
+<Multi_key> <greater>           : "»"   guillemotright # RIGHT DOUBLE ANGLE QUOTATION
+#
+# TODO: одиночные кавычки...
+
+#
+# Матан (чтоб был)
+#
+<Multi_key> <Cyrillic_ef>       : "≈"   approximate  # ALMOST EQUAL TO
+<Multi_key> <a>                 : "≈"   approximate  # ALMOST EQUAL TO
+# <Multi_key> <>              : U223C # TILDE OPERATOR
+<Multi_key> <equal>             : "≠"   U2260        # NOT EQUAL TO
+<Multi_key> <plus>              : "±"   plusminus    # PLUS-MINUS SIGN
+
+
+#
+# Типографика
+#
+# полезное
+<Multi_key> <minus> 	        : "—"   U2014 # EM DASH
+<Multi_key> <underscore> 	    : "–"   U2013 # EN DASH
+<Multi_key> <space>             : " "   nobreakspace # NO-BREAK SPACE
+#
+# бесполезное
+<Multi_key> <Cyrillic_yeru>     : "§"   section      # SECTION SIG
+<Multi_key> <s>                 : "§"   section      # SECTION SIGN
+<Multi_key> <Cyrillic_shcha>    : "°"   degree       # DEGREE SIGN
+<Multi_key> <o>                 : "°"   degree       # DEGREE SIGN
+<Multi_key> <Cyrillic_ve>       : "…"   ellipsis     # HORIZONTAL ELLIPSIS
+<Multi_key> <d>                 : "…"   ellipsis     # HORIZONTAL ELLIPSIS
+<Multi_key> <n>			        : "№" numerosign # NUMERO SIGN
+<Multi_key> <Cyrillic_en>		: "№" numerosign # NUMERO SIGN
+
+
+#
+# Чего не хватает в русской раскладке
+#
+<Multi_key> <Cyrillic_ha>       : "["   bracketleft  # LEFT SQUARE BRACKET
+<Multi_key> <Cyrillic_hardsign> : "]"   bracketright # RIGHT SQUARE BRACKET
+<Multi_key> <Cyrillic_HA>       : "{"   braceleft # LEFT CURLY BRACKET
+<Multi_key> <Cyrillic_HARDSIGN> : "}"   braceright # RIGHT CURLY BRACKET
+#
+<Multi_key> <Cyrillic_io>	: "`"   grave # GRAVE ACCENT
+<Multi_key> <Cyrillic_IO>	: "~"   asciitilde # TILDE
+#
+<Multi_key> <2>              	: "@"   at # COMMERCIAL AT
+<Multi_key> <4>              	: "$"   dollar       # DOLLAR SIGN
