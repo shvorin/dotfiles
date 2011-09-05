@@ -1,4 +1,5 @@
 #!/bin/bash
+PATH=/home/art/SYSTEM/ghc/bin:$PATH
 
 setxkbmap -layout "us,ru(common)" -option "altwin:meta_win,grp:caps_toggle,numpad:microsoft,caps:shift,compose:menu"
 
@@ -7,7 +8,6 @@ setxkbmap -layout "us,ru(common)" -option "altwin:meta_win,grp:caps_toggle,numpa
 gnome-screensaver&
 
 xsetbg -onroot $HOME/.desktop-image.png
-
 #startkde
 #wmaker
 #afterstep
