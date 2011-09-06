@@ -1,9 +1,11 @@
-PATH=$PATH:/home/art/SYSTEM/bin
+setxkbmap -layout "us,ru(common)" -option "altwin:meta_win,grp:caps_toggle,numpad:microsoft,caps:shift,compose:menu"
+
 # xautolock  -time 5 -locker "xlock -lockdelay 60" -nowlocker xlock &
 #xscreensaver -no-splash &
 gnome-screensaver&
-xsetbg $HOME/.desktop-image.png -fullscreen &
-#xsetbg /usr/share/images/desktop-base/bluedeb-1024x768.jpg  -fullscreen &
+
+xsetbg -onroot $HOME/.desktop-image.png
+
 #startkde
 #wmaker
 #afterstep
