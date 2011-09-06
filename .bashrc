@@ -65,6 +65,5 @@ export HISTFILESIZE=1000
 export HISTSIZE=1000
 
 export EDITOR="xemacs21 -nw"
-alias editor=$EDITOR
 
 export PYTHONSTARTUP=/home/art/.pystartup

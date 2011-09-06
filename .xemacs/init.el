@@ -143,7 +143,7 @@
 
 (require 'tex-site)
 
-;(gnuserv-start)
+(gnuserv-start)
 (display-time)
 
 ; mailcrypt
