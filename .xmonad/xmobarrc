@@ -3,10 +3,10 @@ Config { font         = "-*-fixed-medium-r-*-*-*-100-100-100-*-*-iso10646-*"
        , fgColor      = "#00FFFF"
        , position =  Bottom
        , lowerOnStart = False
-       , commands     = [ Run Com "date" ["+\"%a %b %_d %H:%M\""] "mydate" 600
+       , commands     = [ Run Com "date" ["'+%a %b %_d %H:%M'"] "" 300
                         , Run StdinReader
                         ]
        , sepChar      = "%"
        , alignSep     = "}{"
-       , template = "%StdinReader% }{ %mydate%"
+       , template = "%StdinReader% }{ %date%"
        }
