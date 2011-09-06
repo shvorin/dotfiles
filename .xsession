@@ -1,3 +1,5 @@
+#!/bin/bash
+
 setxkbmap -layout "us,ru(common)" -option "altwin:meta_win,grp:caps_toggle,numpad:microsoft,caps:shift,compose:menu"
 
 # xautolock  -time 5 -locker "xlock -lockdelay 60" -nowlocker xlock &
