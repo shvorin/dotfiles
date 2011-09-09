@@ -1,0 +1,4 @@
+! fix keyboard bug on xoft: remove garbage bindings
+keycode 150 = 
+keycode 151 = 
+keycode 136 = 
