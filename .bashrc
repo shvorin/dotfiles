@@ -32,9 +32,6 @@ LC_ALL=ru_RU.UTF-8
 export LANG LC_ALL
 export USERNAME PS1 PS2 INPUTRC http_proxy BASH_ENV PATH
 
-# to force GTK application respect the Compose key
-export GTK_IM_MODULE=xim
-
 # Need for a xterm & co if we don't make a -ls
 [ -n $DISPLAY ] && {
 	 export XAUTHORITY=$HOME/.Xauthority

@@ -1,0 +1,4 @@
+# This file is to be sourced, not executed
+
+# to force GTK application respect the Compose key
+export GTK_IM_MODULE=xim
