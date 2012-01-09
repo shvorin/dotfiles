@@ -5,18 +5,21 @@
 ! emacs, xemacs
 
                 xemacs.geometry: 110x46+0+0
-    Emacs.default.attributeFont: -misc-fixed-medium-r-normal--*-120-100-100-c-*-*-*
-       Emacs.bold.attributeFont: -misc-fixed-bold-r-normal--*-120-100-100-c-*-*-*
-     Emacs.italic.attributeFont: -misc-fixed-medium-o-normal--*-120-100-100-c-*-*-*
-Emacs.bold-italic.attributeFont: -misc-fixed-bold-o-normal--*-120-100-100-c-*-*-*
+    xemacs.default.attributeFont: -misc-fixed-medium-r-normal--*-120-100-100-c-*-*-*
+       xemacs.bold.attributeFont: -misc-fixed-bold-r-normal--*-120-100-100-c-*-*-*
+     xemacs.italic.attributeFont: -misc-fixed-medium-o-normal--*-120-100-100-c-*-*-*
+xemacs.bold-italic.attributeFont: -misc-fixed-bold-o-normal--*-120-100-100-c-*-*-*
 
-Emacs*menubar*FontSet: -*-helvetica-bold-r-*-*-*-120-*-*-*-*-*-*
-  Emacs*popup*FontSet: -*-helvetica-bold-r-*-*-*-120-*-*-*-*-*-*
+xemacs*menubar*FontSet: -*-helvetica-bold-r-*-*-*-120-*-*-*-*-*-*
+  xemacs*popup*FontSet: -*-helvetica-bold-r-*-*-*-120-*-*-*-*-*-*
 
 ! FIXME: thay say "XIM fontset (defaults to system fontset default)", but
 ! "default fontset" seems to be unset. TODO: look up XtDefaultFontSet in
 ! xemacs21 sources.
-  *EmacsFrame.FontSet: -misc-fixed-medium-r-normal--*-120-100-100-c-*-*-*
+  *xemacsFrame.FontSet: -misc-fixed-medium-r-normal--*-120-100-100-c-*-*-*
+
+emacs.font: -misc-fixed-*-*-normal--*-120-100-100-c-*-*-*
+
 
 kvt.geometry: 30x25+00+20
 
