@@ -10,6 +10,7 @@
  '(display-time-mode t)
  '(european-calendar-style t)
  '(fill-column 80)
+ '(indent-tabs-mode nil)
  '(mouse-yank-at-point t)
  '(split-width-threshold nil)
  '(tab-width 4)
@@ -23,3 +24,4 @@
  )
 
 (load-file "~/.emacs.d/init.el")
+(put 'upcase-region 'disabled nil)
