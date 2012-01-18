@@ -50,7 +50,7 @@ main = do
         mkKeymap conf [("M-x g", spawn "firefox")
                       , ("M-x t", spawn $ XMonad.terminal conf)
                       , ("M-C-t", spawn $ XMonad.terminal conf)
-                      , ("M-x e", spawn "xemacs")
+                      , ("M-x e", spawn "emacs")
                       , ("<Pause>", spawn "gnome-screensaver-command --lock")
                       , ("M-<Backspace>", focusUrgent)
                       , ("M-v", windows copyToAll)
