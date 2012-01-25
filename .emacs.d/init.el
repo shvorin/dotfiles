@@ -20,6 +20,8 @@
 (local-set-key "\C-k" 'kill-this-buffer)
 (use-global-map global-map)
 
+(setq auto-mode-alist (cons '("\\.cu[h]?$" . c++-mode) auto-mode-alist))
+
 ;;;
 ;;;
 
