@@ -11,8 +11,8 @@ import XMonad.Actions.CopyWindow
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.IM
 import Data.Ratio ((%))
-import Maybe (maybe, mapMaybe, fromJust)
-import Monad (mplus, liftM)
+import Maybe (maybe, mapMaybe, fromMaybe)
+import Monad (mplus, liftM, ap)
 import qualified List
 import XMonad.Layout.Grid
 import XMonad.Layout.DwmStyle
@@ -48,7 +48,7 @@ main = do
                           , keys          = \c -> mykeys c `M.union` keys defaultConfig c
                           , manageHook = myManageHook
                           , workspaces = ["1:dev","2:mail","3:web","4:IM","5","6","7","8","9","0"]
-                          , logHook = dynamicLogWithPP (myXmobarPP xm) >> updatePointer (Relative 0.2 0.2) >> updateWList
+                          , logHook = dynamicLogWithPP (myXmobarPP xm) >> updatePointer (Relative 0.2 0.2) >> updateCurrentWList
                           , layoutHook = avoidStruts myLayouts
                           , startupHook = setWMName "LG3D" -- a fix for java applets
                           , focusFollowsMouse = True
@@ -103,29 +103,37 @@ main = do
 
           imLayout = named "IM" $ avoidStruts $ reflectHoriz $ IM (1%6) (Role "buddy_list")
 
--- TODO: use global WList -- all windows in all workspaces
-data WList = WList [Window] deriving (Read, Show, Typeable)
+data WList = WList (M.Map WorkspaceId [Window]) deriving (Read, Show, Typeable)
 instance ExtensionClass WList where
-    initialValue = WList []
+    initialValue = WList M.empty
     extensionType = PersistentExtension
 
-updateWList :: X ()
-updateWList = do
-  WList old <- ES.get
+getCurrentWList :: X [Window]
+getCurrentWList = do
+  WList m <- ES.get
+  tag <- gets $ W.tag . W.workspace . W.current . windowset
+  return $ fromMaybe [] $ M.lookup tag m
 
-  let fromStack (W.Stack t ls rs) =
+updateCurrentWList :: X ()
+updateCurrentWList = do
+  WList m <- ES.get
+  workspace <- gets $ W.workspace . W.current . windowset
+  let tag = W.tag workspace
+      stack = W.stack workspace
+
+      fff (W.Stack t ls rs) old =
           t : (curr List.\\ (t:old)) ++ (old `List.intersect` curr)
               where curr = rs ++ ls
 
-  wlist <- gets $ maybe [] fromStack . W.stack . W.workspace . W.current . windowset
-  ES.put (WList wlist)
+  ES.put $ WList (M.alter (Just . (maybe (const []) fff stack) . fromMaybe []) tag m)
 
 myCycleStacks :: [KeySym] -> KeySym -> KeySym -> X ()
 myCycleStacks mods keyNext keyPrev = do
     XConf {theRoot = root, display = d} <- ask
     stack <- gets $ W.stack . W.workspace . W.current . windowset
-    updateWList
-    WList wlist <- ES.get
+    updateCurrentWList
+    wlist <- getCurrentWList
+
 
     let stacks = maybe [] (prio wlist) stack
 
