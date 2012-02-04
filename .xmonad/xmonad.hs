@@ -48,7 +48,7 @@ main = do
                           , keys          = \c -> mykeys c `M.union` keys defaultConfig c
                           , manageHook = myManageHook
                           , workspaces = ["1:dev","2:mail","3:web","4:IM","5","6","7","8","9","0"]
-                          , logHook = dynamicLogWithPP (myXmobarPP xm) >> updatePointer (Relative 0.2 0.2) >> updateCurrentWList
+                          , logHook = dynamicLogWithPP (myXmobarPP xm) >> updatePointer (Relative 0.2 0.2) >> updateCurrentPList
                           , layoutHook = avoidStruts myLayouts
                           , startupHook = setWMName "LG3D" -- a fix for java applets
                           , focusFollowsMouse = True
@@ -70,17 +70,15 @@ main = do
                       , ("M-C-a", dumpStack)
                       , ("M-<Tab>", myCycleStacks [xK_Alt_L] xK_Tab xK_grave)
                      ]
-    xxx s@(W.Stack t ls rs) = s : f W.focusUp' (length ls) ++ f W.focusDown' (length rs) where
-        f p 0 = []
-        f p 1 = [p s]
-        f p n = s : map p (f p (n-1))
-
     dumpStack :: X ()
     dumpStack = do
       XConf {theRoot = root, display = d} <- ask
       stack <- gets $ W.stack . W.workspace . W.current . windowset
       m <- gets extensibleState
-      spawn ("xmessage \"" ++ show stack ++ "\"")
+      updateCurrentPList
+      plist <- getCurrentPList
+      spawn ("xmessage \"" ++ show stack ++ "\n"
+             ++ List.unlines (map show plist) ++ "\"")
 
     myManageHook = composeAll
                    [ className =? "MPlayer"     --> doFloat
@@ -103,39 +101,39 @@ main = do
 
           imLayout = named "IM" $ avoidStruts $ reflectHoriz $ IM (1%6) (Role "buddy_list")
 
-data WList = WList (M.Map WorkspaceId [Window]) deriving (Read, Show, Typeable)
-instance ExtensionClass WList where
-    initialValue = WList M.empty
+data WindowPriorityList = WindowPriorityList (M.Map WorkspaceId [Window])
+                          deriving (Read, Show, Typeable)
+instance ExtensionClass WindowPriorityList where
+    initialValue = WindowPriorityList M.empty
     extensionType = PersistentExtension
 
-getCurrentWList :: X [Window]
-getCurrentWList = do
-  WList m <- ES.get
+getCurrentPList :: X [Window]
+getCurrentPList = do
+  WindowPriorityList m <- ES.get
   tag <- gets $ W.tag . W.workspace . W.current . windowset
   return $ fromMaybe [] $ M.lookup tag m
 
-updateCurrentWList :: X ()
-updateCurrentWList = do
-  WList m <- ES.get
+updateCurrentPList :: X ()
+updateCurrentPList = do
+  WindowPriorityList m <- ES.get
   workspace <- gets $ W.workspace . W.current . windowset
+
   let tag = W.tag workspace
       stack = W.stack workspace
-
-      fff (W.Stack t ls rs) old =
+      merge (W.Stack t ls rs) old =
           t : (curr List.\\ (t:old)) ++ (old `List.intersect` curr)
               where curr = rs ++ ls
 
-  ES.put $ WList (M.alter (Just . (maybe (const []) fff stack) . fromMaybe []) tag m)
+  ES.put $ WindowPriorityList (M.alter (Just . (maybe (const []) merge stack) . fromMaybe []) tag m)
 
 myCycleStacks :: [KeySym] -> KeySym -> KeySym -> X ()
 myCycleStacks mods keyNext keyPrev = do
     XConf {theRoot = root, display = d} <- ask
     stack <- gets $ W.stack . W.workspace . W.current . windowset
-    updateCurrentWList
-    wlist <- getCurrentWList
+    updateCurrentPList
+    plist <- getCurrentPList
 
-
-    let stacks = maybe [] (prio wlist) stack
+    let stacks = maybe [] (proritize plist) stack
 
         evt = allocaXEvent $
                   \p -> do maskEvent d (keyPressMask .|. keyReleaseMask) p
@@ -156,7 +154,7 @@ myCycleStacks mods keyNext keyPrev = do
   where cycref l i = l !! (i `mod` length l) -- modify' ensures l is never [], but must also be finite
         numKeyToN = subtract 48 . read . show
 
-        prio wlist (W.Stack t ls rs) = map f wlist
+        proritize plist (W.Stack t ls rs) = map f plist
             where
               f w = W.Stack w ls' rs' where
                   Just (ls', rs') = m0 `mplus` m1 `mplus` m2
