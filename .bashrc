@@ -32,11 +32,6 @@ LC_ALL=ru_RU.UTF-8
 export LANG LC_ALL
 export USERNAME PS1 PS2 INPUTRC http_proxy BASH_ENV PATH
 
-# Need for a xterm & co if we don't make a -ls
-[ -n $DISPLAY ] && {
-	 export XAUTHORITY=$HOME/.Xauthority
-}
-
 # Read first /etc/inputrc if the variable is not defined, and after the /etc/inputrc 
 # include the ~/.inputrc
 [ -z $INPUTRC ] && export INPUTRC=/etc/inputrc
