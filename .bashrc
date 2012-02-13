@@ -19,7 +19,7 @@ fi
 alias sudobash="sudo -H bash"
 
 export HISTCONTROL=ignoredups
-PATH=$HOME/SYSTEM/ghc/bin:$HOME/bin:$PATH:/home/skif/altera9.1/quartus/bin
+PATH=$HOME/SYSTEM/bin:$HOME/bin:$PATH:/home/skif/altera9.1/quartus/bin
 BASH_ENV=$HOME/.bashrc
 USERNAME="Artem"
 PS1="\[\033[1;37;40m\]\h:\W>\[\033[0m\] "
@@ -31,9 +31,6 @@ LC_ALL=ru_RU.UTF-8
 
 export LANG LC_ALL
 export USERNAME PS1 PS2 INPUTRC http_proxy BASH_ENV PATH
-
-# to force GTK application respect the Compose key
-export GTK_IM_MODULE=xim
 
 # Need for a xterm & co if we don't make a -ls
 [ -n $DISPLAY ] && {
@@ -64,6 +61,7 @@ alias pop-perl5='pop-perl5 -k'
 export HISTFILESIZE=1000
 export HISTSIZE=1000
 
-export EDITOR="xemacs21 -nw"
+export EDITOR="emacs -nw"
 
 export PYTHONSTARTUP=/home/art/.pystartup
+export TERM=rxvt-256color
