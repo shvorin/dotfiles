@@ -64,3 +64,4 @@ export HISTSIZE=1000
 export EDITOR="emacs -nw"
 
 export PYTHONSTARTUP=/home/art/.pystartup
+export TERM=rxvt-256color
