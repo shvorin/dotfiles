@@ -189,3 +189,4 @@ URxvt.background: black
 URxvt.foreground: peachpuff
 URxvt.saveLines: 1500
 URxvt.scrollTtyKeypress: on
+URxvt.print-pipe: cat > $(mktemp --tmpdir=$HOME urxvt.XXXXXX)
