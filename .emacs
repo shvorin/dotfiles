@@ -12,6 +12,7 @@
  '(fill-column 80)
  '(indent-tabs-mode nil)
  '(mouse-yank-at-point t)
+ '(safe-local-variable-values (quote ((LaTeX-item-indent . -4) (LaTeX-indent-level . 4))))
  '(split-width-threshold nil)
  '(tab-width 4)
  '(tool-bar-mode nil)

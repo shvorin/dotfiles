@@ -28,7 +28,6 @@
 [helpers]
 # editor-cmd = editor (vi, emacs, notepad, etc.)
 #editor-cmd = /usr/bin/joe -nobackups
-editor-cmd = vim
 # diff-cmd = diff_program (diff, gdiff, etc.)
 # diff3-cmd = diff3_program (diff3, gdiff3, etc.)
 # diff3-has-program-arg = [true | false]
