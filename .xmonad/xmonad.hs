@@ -11,9 +11,9 @@ import XMonad.Actions.CopyWindow
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.IM
 import Data.Ratio ((%))
-import Maybe (maybe, mapMaybe, fromMaybe)
-import Monad (mplus, liftM, ap)
-import qualified List
+import Data.Maybe (maybe, mapMaybe, fromMaybe)
+import Control.Monad (mplus, liftM, ap)
+import qualified Data.List as List
 import XMonad.Layout.Grid
 import XMonad.Layout.DwmStyle
 import XMonad.Layout.Named
