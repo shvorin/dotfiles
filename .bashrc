@@ -16,7 +16,7 @@ if [ -f ~/.dir_colors ]; then
 else
     eval `dircolors`
 fi
-alias sudobash="sudo -H bash"
+alias sudobash="sudo -H bash -l"
 
 export HISTCONTROL=ignoredups
 PATH=$HOME/SYSTEM/bin:$HOME/bin:$PATH:/home/skif/altera9.1/quartus/bin
