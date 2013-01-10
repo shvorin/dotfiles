@@ -19,7 +19,7 @@ fi
 alias sudobash="sudo -H bash -l"
 
 export HISTCONTROL=ignoredups
-PATH=$HOME/SYSTEM/bin:$HOME/bin:$PATH:/home/skif/altera9.1/quartus/bin
+PATH=$HOME/SYSTEM/bin:$HOME/bin:$PATH:/home/skif/altera12.1/quartus/bin
 BASH_ENV=$HOME/.bashrc
 USERNAME="Artem"
 PS1="\[\033[1;37;40m\]\h:\W>\[\033[0m\] "
@@ -60,3 +60,5 @@ export EDITOR="emacs -nw"
 
 export PYTHONSTARTUP=/home/art/.pystartup
 export TERM=rxvt-256color
+
+export QUARTUS_64BIT=1
