@@ -26,3 +26,4 @@
 
 (load-file "~/.emacs.d/init.el")
 (put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)

@@ -27,9 +27,10 @@ PS2=">>"
 INPUTRC="~/.inputrc"
 
 LANG=ru_RU.UTF-8
+LANGUAGE=ru_RU.UTF-8
 LC_ALL=ru_RU.UTF-8
 
-export LANG LC_ALL
+export LANG LANGUAGE LC_ALL
 export USERNAME PS1 PS2 INPUTRC http_proxy BASH_ENV PATH
 
 # Read first /etc/inputrc if the variable is not defined, and after the /etc/inputrc 
