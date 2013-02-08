@@ -16,6 +16,8 @@
  '(split-width-threshold nil)
  '(tab-width 4)
  '(tool-bar-mode nil)
+ '(vhdl-basic-offset 4)
+ '(vhdl-electric-mode nil)
  '(visible-bell t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.

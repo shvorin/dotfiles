@@ -20,7 +20,7 @@
 (local-set-key "\C-k" 'kill-this-buffer)
 (use-global-map global-map)
 
-(setq auto-mode-alist (cons '("\\.cu[h]?$" . c++-mode) (cons '("\\.\\(sdc\\|qsf\\)$" . tcl-mode) auto-mode-alist)))
+(setq auto-mode-alist (cons '("\\.cu[h]?$" . c++-mode) (cons '("\\.\\(sdc\\|qsf\\|qip\\)$" . tcl-mode) auto-mode-alist)))
 
 ;;;
 ;;;
