@@ -30,7 +30,9 @@
  '(agda2-highlight-postulate-face ((t (:foreground "light blue"))))
  '(agda2-highlight-primitive-face ((t (:foreground "light blue"))))
  '(agda2-highlight-primitive-type-face ((t (:foreground "light blue"))))
- '(agda2-highlight-record-face ((t (:foreground "light blue")))))
+ '(agda2-highlight-record-face ((t (:foreground "light blue"))))
+ '(agda2-highlight-unsolved-constraint-face ((t (:background "orange3" :foreground "black"))))
+ '(agda2-highlight-unsolved-meta-face ((t (:background "orange3" :foreground "black")))))
 
 (load-file "~/.emacs.d/init.el")
 (put 'upcase-region 'disabled nil)
