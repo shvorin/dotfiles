@@ -19,7 +19,7 @@ fi
 alias sudobash="sudo -H bash -l"
 
 export HISTCONTROL=ignoredups
-PATH=$HOME/SYSTEM/bin:$HOME/bin:$PATH:/opt/altera/quartus/12.1/quartus/bin
+PATH=$HOME/SYSTEM/bin:$HOME/bin:$PATH:/opt/altera/quartus/13.0/quartus/bin:$HOME/.cabal/bin
 BASH_ENV=$HOME/.bashrc
 USERNAME="Artem"
 PS1="\[\033[1;37;40m\]\h:\W>\[\033[0m\] "
