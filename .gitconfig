@@ -13,3 +13,5 @@
 [alias]
 	st = status
 	log-svn = log --name-status
+[push]
+	default = simple
