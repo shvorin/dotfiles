@@ -3,7 +3,7 @@ Config { font         = "-*-fixed-medium-r-*-*-*-100-100-100-*-*-iso10646-*"
        , fgColor      = "#00FFFF"
        , position =  Bottom
        , lowerOnStart = False
-       , commands     = [ Run Com "date" ["'+%a %b %_d %H:%M'"] "" 300
+       , commands     = [ Run Com "/bin/date" ["'+%a %b %_d %H:%M'"] "" 300
                         , Run StdinReader
                         ]
        , sepChar      = "%"

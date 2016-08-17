@@ -48,7 +48,7 @@ main = do
                           , keys          = \c -> mykeys c `M.union` keys defaultConfig c
                           , manageHook = myManageHook
                           , workspaces = ["1:dev","2:mail","3:web","4:IM","5","6","7","8","9","0"]
-                          , logHook = dynamicLogWithPP (myXmobarPP xm) >> updatePointer (Relative 0.2 0.2) >> updateCurrentPList
+                          , logHook = dynamicLogWithPP (myXmobarPP xm) >> updatePointer (0.2,0.2) (0.5, 0.5) >> updateCurrentPList
                           , layoutHook = avoidStruts myLayouts
                           , startupHook = setWMName "LG3D" -- a fix for java applets
                           , focusFollowsMouse = True
@@ -85,6 +85,7 @@ main = do
                    , className =? "mplayer"     --> doFloat
                    , className =? "Pidgin"      --> moveTo "4:IM"
                    , className =? "Iceweasel" --> moveTo "3:web"
+                   , className =? "Firefox" --> moveTo "3:web"
                    ]
         where
           moveTo = doF . W.shift
