@@ -7,6 +7,7 @@
 	email = a.shvorin@highloadlab.com
 [core]
 	excludesfile = /home/art/.git-excludesfile
+	pager = less -F -X
 
 [http]
 	sslVerify = false
