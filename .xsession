@@ -1,14 +1,14 @@
 #!/bin/bash
 PATH=$HOME/.cabal/bin:$PATH
 
-setxkbmap -layout "us,ru(common)" -option "altwin:meta_win,grp:caps_toggle,numpad:microsoft,caps:shift,compose:menu"
+setxkbmap -layout "us,ru(common)" -option "altwin:meta_win,grp:caps_toggle,numpad:microsoft,caps:shift,compose:menu,terminate:ctrl_alt_bksp"
 xmodmap $HOME/.xmodmaprc
 
 # xautolock  -time 5 -locker "xlock -lockdelay 60" -nowlocker xlock &
 #xscreensaver -no-splash &
 gnome-screensaver&
 
-xsetbg -onroot $HOME/.desktop-image.png
+#xsetbg -onroot $HOME/.desktop-image.png
 #startkde
 #wmaker
 #afterstep
