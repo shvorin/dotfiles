@@ -26,9 +26,9 @@ PS1="\[\033[1;37;40m\]\h:\W>\[\033[0m\] "
 PS2=">>"
 INPUTRC="~/.inputrc"
 
-LANG=ru_RU.UTF-8
-LANGUAGE=ru_RU.UTF-8
-LC_ALL=ru_RU.UTF-8
+LANG=ru_RU.utf-8
+LANGUAGE=ru_RU.utf-8
+LC_ALL=ru_RU.utf-8
 
 export LANG LANGUAGE LC_ALL
 export USERNAME PS1 PS2 INPUTRC http_proxy BASH_ENV PATH
