@@ -52,6 +52,7 @@ main = do
                           , layoutHook = avoidStruts myLayouts
                           , startupHook = setWMName "LG3D" -- a fix for java applets
                           , focusFollowsMouse = True
+                          , handleEventHook = docksEventHook
                           }
 
     mykeys conf =
