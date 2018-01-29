@@ -4,7 +4,7 @@
 	branch = auto
 [user]
 	name = Artem Shvorin
-	email = a.shvorin@highloadlab.com
+	email = art@highloadlab.com
 [core]
 	excludesfile = /home/art/.git-excludesfile
 	pager = less -F -X
