@@ -43,6 +43,8 @@
 <Multi_key> <minus> 	        : "—"   U2014 # EM DASH
 <Multi_key> <underscore> 	    : "–"   U2013 # EN DASH
 <Multi_key> <space>             : " "   nobreakspace # NO-BREAK SPACE
+<Multi_key> <x>                 : "⁠"   U2060 # WORD JOINER
+<Multi_key> <ч>                 : "⁠"   U2060 # WORD JOINER
 #
 # бесполезное
 <Multi_key> <Cyrillic_yeru>     : "§"   section      # SECTION SIG
