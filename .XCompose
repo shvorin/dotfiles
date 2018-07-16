@@ -35,6 +35,37 @@
 <Multi_key> <equal>             : "≠"   U2260        # NOT EQUAL TO
 <Multi_key> <plus>              : "±"   plusminus    # PLUS-MINUS SIGN
 
+#
+# Čeština
+#
+<Multi_key> <grave> <a>         : "á"
+<Multi_key> <grave> <e>         : "é"
+<Multi_key> <grave> <q>         : "ě"
+<Multi_key> <grave> <i>         : "í"
+<Multi_key> <grave> <y>         : "ý"
+<Multi_key> <grave> <u>         : "ú"
+<Multi_key> <grave> <w>         : "ů"
+<Multi_key> <grave> <o>         : "ó"
+<Multi_key> <grave> <c>         : "č"
+<Multi_key> <grave> <d>         : "ď"
+<Multi_key> <grave> <n>         : "ň"
+<Multi_key> <grave> <r>         : "ř"
+<Multi_key> <grave> <t>         : "ť"
+<Multi_key> <grave> <z>         : "ž"
+<Multi_key> <grave> <A>         : "Á"
+<Multi_key> <grave> <E>         : "É"
+<Multi_key> <grave> <Q>         : "Ě"
+<Multi_key> <grave> <I>         : "Í"
+<Multi_key> <grave> <Y>         : "Ý"
+<Multi_key> <grave> <U>         : "Ú"
+<Multi_key> <grave> <W>         : "Ů"
+<Multi_key> <grave> <O>         : "Ó"
+<Multi_key> <grave> <C>         : "Č"
+<Multi_key> <grave> <D>         : "Ď"
+<Multi_key> <grave> <N>         : "Ň"
+<Multi_key> <grave> <R>         : "Ř"
+<Multi_key> <grave> <T>         : "Ť"
+<Multi_key> <grave> <Z>         : "Ž"
 
 #
 # Типографика
