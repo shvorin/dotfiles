@@ -21,7 +21,7 @@ fi
 alias sudobash="sudo -H bash -l"
 
 export HISTCONTROL=erasedups
-PATH=$HOME/SYSTEM/bin:$HOME/bin:$PATH:/opt/altera/quartus/13.1/quartus/bin:$HOME/.cabal/bin
+PATH=$HOME/SYSTEM/bin:$HOME/bin:$HOME/.cabal/bin:$PATH
 BASH_ENV=$HOME/.bashrc
 USERNAME="Artem"
 PS1="\[\033[1;37;40m\]\h:\W>\[\033[0m\] "
@@ -48,10 +48,7 @@ alias lla='ls -lA'
     #alias vdir='ls --color=auto --format=long'
 alias grep='grep --color=auto'
 alias igrep='grep -i'
-#alias mail='mail -a "From:shvorin@mail.ru"'
-alias pop3='runsocks pop-perl5'
 alias untar='tar zvxf'
-alias pop-perl5='pop-perl5 -k'
 
 # needed to compile jscp without altering Makefile.inc
 #export CPP="/lib/cpp -P -traditional -Dunix -Umsdos -Uwin32"

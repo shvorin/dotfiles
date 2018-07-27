@@ -20,4 +20,3 @@ USERNAME=""
 GS_LIB=/usr/share/fonts/default/Type1-Cyr
 
 export USERNAME GS_LIB
-export CVS_RSH=ssh
