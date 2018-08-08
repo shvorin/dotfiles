@@ -47,6 +47,7 @@
 <Multi_key> <grave> <w>         : "ů"
 <Multi_key> <grave> <o>         : "ó"
 <Multi_key> <grave> <c>         : "č"
+<Multi_key> <grave> <s>         : "š"
 <Multi_key> <grave> <d>         : "ď"
 <Multi_key> <grave> <n>         : "ň"
 <Multi_key> <grave> <r>         : "ř"
