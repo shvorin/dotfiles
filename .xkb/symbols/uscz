@@ -1,0 +1,23 @@
+xkb_symbols "uscz" {
+
+    include "us(basic)"
+    name[Group1]= "English (US) + Czheck";
+
+    key <AC01> { [ a, A, aacute, Aacute ] };
+    key <AD09> { [ o, O, oacute, Oacute ] };
+    key <AD03> { [ e, E, eacute, Eacute ] };
+    key <AD06> { [ y, Y, yacute, Yacute ] };
+    key <AD08> { [ i, I, iacute, Iacute ] };
+    key <AD07> { [ u, U, uacute, Uacute ] };
+
+    key <AB01> { [ z, Z, zcaron, Zcaron ] };
+    key <AC03> { [ d, D, dcaron, Dcaron ] };
+    key <AD05> { [ t, T, tcaron, Tcaron ] };
+    key <AB06> { [ n, N, ncaron, Ncaron ] };
+    key <AC02> { [ s, S, scaron, Scaron ] };
+    key <AB03> { [ c, C, ccaron, Ccaron ] };
+    key <AD04> { [ r, R, rcaron, Rcaron ] };
+
+    key <AD01> { [ q, Q, ecaron, Ecaron ] };
+    key <AD02> { [ w, W, uring,  Uring  ] };
+};
