@@ -87,6 +87,7 @@ main = do
                    , className =? "Pidgin"      --> moveTo "4:IM"
                    , className =? "Iceweasel" --> moveTo "3:web"
                    , className =? "Firefox" --> moveTo "3:web"
+                   , className =? "Firefox-esr" --> moveTo "3:web"
                    ]
         where
           moveTo = doF . W.shift
