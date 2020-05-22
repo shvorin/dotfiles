@@ -52,6 +52,5 @@
 
 (reverse-input-method 'cyrillic-jcuken)  
 
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-dark-laptop)
+(package-initialize)
+(load-theme 'dark-laptop t)
