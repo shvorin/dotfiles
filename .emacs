@@ -5,6 +5,12 @@
  ;; If there is more than one, they won't work right.
  '(agda2-include-dirs (quote ("/home/art/Build/agda-lib/lib-0.7/src" ".")))
  '(blink-cursor-mode nil)
+ '(c++-mode-hook
+   (quote
+    ((lambda nil
+       (setq indent-tabs-mode t))
+     (lambda nil
+       (setq c-basic-offset 4)))))
  '(c-basic-offset (quote set-from-style))
  '(c-default-style
    (quote
