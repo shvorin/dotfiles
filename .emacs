@@ -8,7 +8,7 @@
  '(c++-mode-hook
    (quote
     ((lambda nil
-       (setq indent-tabs-mode t))
+       (setq indent-tabs-mode nil))
      (lambda nil
        (setq c-basic-offset 4)))))
  '(c-basic-offset (quote set-from-style))
@@ -21,7 +21,7 @@
  '(c-mode-hook
    (quote
     ((lambda nil
-       (setq indent-tabs-mode t))
+       (setq indent-tabs-mode nil))
      (lambda nil
        (setq c-basic-offset 4)))))
  '(calendar-week-start-day 1)
