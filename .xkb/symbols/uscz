@@ -1,7 +1,7 @@
 xkb_symbols "uscz" {
 
     include "us(basic)"
-    name[Group1]= "English (US) + Czheck";
+    name[Group1]= "English (US) + Czech";
 
     // á, ó, é, ý, í, ú
     key <AC01> { [ a, A, aacute, Aacute ] };
