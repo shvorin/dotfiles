@@ -1,10 +1,7 @@
-// Meta is mapped to the Super keys.
 partial modifier_keys
 xkb_symbols "meta_win_x" {
-    key <LALT> {[  Alt_L,  Alt_L  ]};
-    key <RALT> {[  Alt_R,  Alt_R  ], type[group1] = "TWO_LEVEL" };
-    key <LWIN> {[  Meta_L  ]};
-    key <RWIN> {[  Meta_R  ]};
-    modifier_map Mod1 { <LALT>, <RALT> };
-    modifier_map Mod3 { <META>, Meta_L, Meta_R };
+    key <LALT> { [Alt_L, Alt_R] };
+    key <LWIN> {[  Meta_L, Meta_R  ]};
+    modifier_map Mod1     { <ALT>         , Alt_L         , Alt_R         };
+    modifier_map Mod3     { <META>        , Meta_L        , Meta_R        };
 };
